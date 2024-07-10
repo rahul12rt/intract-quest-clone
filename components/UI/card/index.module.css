@@ -1,0 +1,208 @@
+.cardWrapper {
+  width: 283px;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.rellWrapper {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.videoWrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 50%;
+  font-size: 36px;
+  height: 60px;
+  width: 60px;
+  left: 50%;
+  transform: translate(-50%, -5px);
+  cursor: pointer;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.card p {
+  color: #fff9;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.117px;
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  mix-blend-mode: plus-lighter;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
+}
+
+.cardWrapper:hover .videoWrapper {
+  opacity: 1;
+  transform: translate(-50%, -35px);
+}
+
+.cardWrapper:hover .overLay {
+  background-color: #000;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+}
+
+.iframeWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.close {
+  z-index: 1000;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.infoContainer {
+  width: 160px;
+  position: relative;
+  z-index: 10;
+  margin-right: 120px;
+}
+
+.section {
+  width: 160px;
+  height: 180px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  justify-content: flex-end;
+  margin-right: 120px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.rewardImage {
+  width: 147px;
+  height: 165px;
+  border-radius: 20px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.lockWrapper {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #131313;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(34%, 35%);
+}
+
+.claimBtn {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #ffffff0d;
+  display: flex;
+  width: 160px;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: not-allowed !important;
+}
+
+.name {
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.desc {
+  color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cardWrapper {
+    width: 100%;
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoContainer {
+    margin-right: 0;
+  }
+}
